@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleTech.css">
+    <title>Technical Java Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Java Documentation</h1>
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_Know">What you should already Know</a></li>
+            <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+            <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+            <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+            <li><a class="nav-link" href="#Constants">Constants</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
+            <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+            <li><a class="nav-link" href="#while_statement">while statement</a></li>
+            <li><a class="nav-link" href="#Function_declarations">Fuction declarations</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+    <article>
+            <p>
+            Java is a popular, platform-independent programming language developed
+            by Sun Microsystems. It follows an object-oriented approach and emphasizes
+            simplicity and readability. With its "write once, run anywhere" principle,
+            Java programs can be executed on different platforms using the Java Virtual
+            Machine (JVM). It has a vast ecosystem and is widely used for developing
+            a wide range of applications, including desktop, web, and mobile applications.
+            </p>
+        <ul>
+            <li>
+                client-side Java is commonly used for building desktop applications, 
+                mobile apps (specifically for Android), and web applets (although applets
+                have become less common in recent years).For desktop applications, Java provides
+                 a framework called Swing that allows developers to create graphical user 
+                 interfaces (GUIs). Swing provides a set of components, such as buttons,
+                text fields, and menus, which can be used to build interactive desktop applications.
+            </li>
+            <li> server side, Java is widely used for developing web applications and backend systems.
+                 It offers various frameworks and libraries like Spring and Java EE for building scalable
+                and secure server-side applications. Java's strong support for multithreading and robust
+                exception handling makes it suitable for handling concurrent requests and managing 
+                complex server-side logic. Its platform independence and extensive ecosystem contribute
+                 to its popularity in server-side development.</li>
+         <ul>
+        </article>
+        </section>
+        <section class="main-section" id="What_you_should_already_Know">
+            <header>What you should already Know</header>
+            <article>
+            <p>If I had to narrow it down to the three main things a student needs to know to learn Java, they would be:</p>
+            <ul>
+                <li>Object-Oriented Programming (OOP): Java is an object-oriented language,
+                     so having a good understanding of OOP concepts like classes, objects, 
+                     inheritance, polymorphism, and encapsulation is essential. It is recommended
+                      to learn OOP before diving into Java programming.</li>
+                <li>Java Syntax and Language Features: Java has its own syntax, and a beginner
+                     needs to be familiar with the basic syntax rules, including declaring variables,
+                      writing functions, using conditionals and loops, handling exceptions, and memory
+                       management through garbage collection.</li>
+                <li>
+                    Java Development Environment: A student must have a Java development environment
+                     installed on their computer, such as Eclipse, IntelliJ IDEA, or NetBeans.
+                      Understanding how to create a new project, write code, compile, and run 
+                      Java programs using an IDE is essential for learning Java.
+                </li>
+            </ul>
+            </article>
+
+        </section>
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <article>
+                <p>To get started with writing Java, open the Scratchpad and write your first "Hello world" Java code:</p>
+                <code>
+                    static void greetme(){
+                        System.out.println("Hello World");
+                    }
+                    greetme();
+                </code>
+                 
+            </article>
+        </section>
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>  
+            <article><p>
+                In Java, variables are declared by specifying the
+                 data type followed by the variable name. Here's the
+                  syntax for variable declaration in Java:
+            </p>
+        <code>int count = 10;
+            double temperature = 25.5;
+            boolean isActive = true;
+            String message = "Hello, world!";
+            </code>
+    </article>
+        </section>
+        <section class="main-section" id="Variable_scope">
+           <header>Variable scope</header>
+           <article>
+           <p>In Java, the scope of a variable determines its visibility and accessibility
+             within a program. The scope determines where the variable can be accessed and 
+             used. Java supports several types of variable scopes, including:</p>
+             <ul>
+                <li>Local Scope: Variables declared within a method, constructor, or a block 
+                    of code have local scope. They are only accessible within that specific 
+                    code block and are not visible outside of it. Once the block of code is exited,
+                    the variable goes out of scope and cannot be accessed anymore.</li>
+                    <p>Example:</p>
+                    <code>public void someMethod() {
+                        int x = 10; // local variable
+                        System.out.println(x); // x is accessible within this method
+                    }
+                    </code>
+                <li>Instance Scope: Variables declared at the class level but not within any method
+                     are instance variables. They have instance scope and are accessible to all methods
+                      and blocks within the class. Each instance of the class (object) has its own copy 
+                      of the instance variables.</li>
+                      <p>Example:</p>
+                      <code>public class MyClass {
+                        private int x; // instance variable
+                        
+                        public void setX(int value) {
+                            x = value; // assigning a value to the instance variable
+                        }
+                        
+                        public void printX() {
+                            System.out.println(x); // accessing the instance variable
+                        }
+                    }
+                    </code>
+                <li>Class Scope (Static Scope): Variables declared with the static keyword at the class level 
+                    are called class variables or static variables. They have class scope and are shared 
+                    among all instances of the class. They can be accessed without creating an instance of the class.
+                </li>
+                <p>Example:</p>
+                <code>public class MyClass {
+                    private static int count; // class variable
+                    
+                    public MyClass() {
+                        count++; // accessing the class variable
+                    }
+                    
+                    public static void printCount() {
+                        System.out.println(count); // accessing the class variable
+                    }
+                }
+                </code>
+             </ul>
+           </article>
+        </section>
+        <section class=""main-section id="Global_variables">
+            <header>Global variables</header>
+            <article>
+            <p>In Java, global variables, also known as class-level variables,
+                 are declared at the class level but outside of any method, constructor,
+                  or block. They have a broader scope compared to local variables and can 
+                  be accessed from any part of the class, including methods, constructors, and blocks.</p>
+                <p>To declare a global variable in Java, you need to declare it as an instance variable by
+                     placing it within the class but outside of any method or block. Here's an example:</p>
+                     <code>public class MyClass {
+                        // Global variable or instance variable
+                        private int globalVar;
+                    
+                        public void setGlobalVar(int value) {
+                            globalVar = value; // Assigning a value to the global variable
+                        }
+                    
+                        public void printGlobalVar() {
+                            System.out.println(globalVar); // Accessing the global variable
+                        }
+                    
+                        // Other methods and code blocks can also access the global variable
+                    }
+                    </code>
+                    <p>In the above example, the variable globalVar is declared as an instance variable
+                         within the class MyClass. It can be accessed and modified by any method within the class.
+                          Each instance of the class (object) will have its own copy of the global variable.</p>
+                        </article>
+                        </section>
+        <section class="main-section" id="Constants">
+            <header>Constants</header>
+            <article>
+            <p>In Java, constants are variables whose values cannot be changed once they are assigned. 
+                They are typically used to store values that are fixed and do not need to be modified 
+                during the execution of a program. Java provides a way to define constants using the final keyword.</p>
+                <p>To declare a constant in Java, follow these steps:</p>
+                <ul>
+                    <li type="number">Declare the constant variable and assign it a value.</li>
+                    <li type="number">Use the final keyword to indicate that the variable is a constant and cannot be reassigned.</li>
+                </ul>
+                <p>Here's an example:</p>
+                <code>public class MyClass {
+                    public static final int MAX_VALUE = 100; // Constant variable
+                
+                    public static void main(String[] args) {
+                        System.out.println(MAX_VALUE); // Accessing the constant variable
+                        // MAX_VALUE = 200; // Error: Cannot assign a new value to a constant variable
+                    }
+                }
+                </code>
+                <p>In the example above, the constant MAX_VALUE is declared as a 
+                    static final variable within the class MyClass. It is assigned a value of 100 
+                    and cannot be changed afterward. The final keyword ensures that the variable is a constant.</p>
+                </article>
+                </section>
+        <section class="main-section" id="Data_types">
+        <header>Data types</header>
+        <article>
+        <p>In Java, data types define the types of values that can be stored and manipulated by variables. 
+            Java provides a set of built-in primitive data types and also allows for the creation of user-defined 
+            custom data types using classes and interfaces. Here are the commonly used data types in Java:</p>
+            <ul>Primitive Data Types:
+                <li>byte: Represents a 1-byte integer value ranging from -128 to 127.</li>
+                <li>short: Represents a 2-byte integer value ranging from -32,768 to 32,767.</li>
+                <li>int: Represents a 4-byte integer value ranging from -2,147,483,648 to 2,147,483,647.</li>
+                <li>long: Represents an 8-byte integer value ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</li>
+                <li>float: Represents a 4-byte floating-point value with decimal precision.</li>
+                <li>double: Represents an 8-byte floating-point value with higher decimal precision.</li>
+                <li>boolean: Represents a boolean value (true or false).</li>
+                <li>char: Represents a single character value, such as 'A' or '5'</li>
+            </ul>
+            <ul>Reference/Object Data Types:
+               <li>String: Represents a sequence of characters.</li>
+               <li>Array: Represents a collection of elements of the same type.</li>
+               <li>Class: Represents a class type.</li>
+               <li>Interface: Represents an interface type.</li>
+               <li>Enum: Represents a predefined set of constants.</li>
+            </ul>
+            <p>In addition to the built-in data types, Java supports the creation of custom data types through classes and interfaces.
+                 These custom data types can have their own properties (variables) and behaviors (methods).
+                  By creating classes and defining their fields and methods, you can create objects and work
+                   with more complex data structures.</p>
+
+            <p>  Here's an example of using a custom class to define a custom data type:</p>
+                <code>public class Person {
+                    private String name;
+                    private int age;
+                
+                    public Person(String name, int age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                
+                    public void greet() {
+                        System.out.println("Hello, my name is " + name + " and I'm " + age + " years old.");
+                    }
+                
+                    // Getters and setters for name and age
+                    // ...
+                }
+                </code>
+                <p>In this example, the Person class represents a custom data type that has two fields (name and age)
+                     and a method (greet()) to greet the person. You can create instances of this class and access its
+                      fields and methods.</p>
+                      <code>public class Main {
+                        public static void main(String[] args) {
+                            Person person1 = new Person("John", 25);
+                            Person person2 = new Person("Alice", 30);
+                    
+                            person1.greet(); // Output: Hello, my name is John and I'm 25 years old.
+                            person2.greet(); // Output: Hello, my name is Alice and I'm 30 years old.
+                        }
+                    }
+                    </code>
+                </article>
+        </section>
+        <section class="main-section" id="if...else_statement">
+            <header>if...else statement</header>
+            <p>In Java, the if-else statement allows you to control the flow of your program based on a certain condition
+                . It provides a way to execute different blocks of code depending on whether a condition is true or false.
+                 The general syntax of the if-else statement is as follows:</p>
+                 <code>if (condition) {
+                    // Code to execute if the condition is true
+                } else {
+                    // Code to execute if the condition is false
+                }
+                
+                </code>
+        </section>
+        <section class="main-section" id="while_statement">
+            <header>while statement</header>
+            <article>
+            <p>In Java, the while loop allows you to repeatedly execute a block of code as long as a certain condition is true.
+                 It is a type of loop that iterates based on the condition provided. 
+                 The general syntax of the while loop is as follows:</p>
+                 <code>while (condition) {
+                    // Code to be executed as long as the condition is true
+                }
+                </code>
+                <p>Example:</p>
+                <code>public class Main {
+                    public static void main(String[] args) {
+                        int count = 0;
+                
+                        while (count < 5) {
+                            System.out.println("Count: " + count);
+                            count++;
+                        }
+                    }
+                }
+                </code>
+            </article>
+        </section>
+            
+            <section class="main-section"id="Function_declarations">
+        <header>Function declarations</header>
+        <article>
+        <p>In Java, functions are declared as methods within a class. A method is a block
+             of code that performs a specific task and can be called and executed when needed.
+              Method declarations specify the access modifier, return type, method name,
+               parameters, and the body of the method. Here's the general syntax for declaring 
+               a method in Java:</p>
+            <code><access modifier> <return type> <method name>(<parameters>) {
+                // Method body
+                // Code to be executed
+                // Optional return statement
+            }
+            </code>
+            <ul>Let's break down each component of the method declaration:
+                <li><access modifier>: Specifies the visibility of the method, such as public,
+                     private, or protected. If no access modifier is specified, it defaults to
+                      package-private.</li>
+                <li><return type>: Specifies the type of value that the method returns after execution. 
+                    Use void if the method does not return any value.</li>
+                <li><method name>: Specifies the name of the method, following Java naming conventions.
+                     It should be descriptive and indicate the purpose of the method.</li>
+                <li><parameters>: Specifies the input parameters (if any) that the method accepts. 
+                    Parameters are optional and can have a type and a name.</li>
+                <li>Method body: The block of code that contains the instructions to be executed when the method is called.
+                     It is enclosed within curly braces {}.</li>
+            </ul>
+            <p>Here's an example of a method declaration in Java:</p>
+            <code>public class MyClass {
+                public void greet(String name) {
+                    System.out.println("Hello, " + name + "!");
+                }
+            
+                public int sum(int a, int b) {
+                    int result = a + b;
+                    return result;
+                }
+            
+                private void doSomething() {
+                    // Method body with no parameters and no return type
+                    // ...
+                }
+            }
+            </code>
+        </article>
+            </section>
+            <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+            <p> OpenAI and GPT-3.5 as the sources of the information.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
