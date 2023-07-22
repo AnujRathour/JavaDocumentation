@@ -18,11 +18,11 @@
             <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
             <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
             <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
-            <li><a class="nav-link" href="#Constants">Constants</a></li>
-            <li><a class="nav-link" href="#Data_types">Data types</a></li>
-            <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+            <li><a class="nav-link" href="#Constants"></a></li>
+            <li><a class="nav-link" href="#Data_types"></a></li>
+            <li><a class="nav-link" href="#if...else statement">if...else statement</a></li>
             <li><a class="nav-link" href="#while_statement">while statement</a></li>
-            <li><a class="nav-link" href="#Function_declarations">Fuction declarations</a></li>
+            <li><a class="nav-link" href="#Fuction_declarations">Fuction declarations</a></li>
             <li><a class="nav-link" href="#Reference">Reference</a></li>
         </ul>
     </nav>
@@ -144,7 +144,9 @@
                     are called class variables or static variables. They have class scope and are shared 
                     among all instances of the class. They can be accessed without creating an instance of the class.
                 </li>
-                <p>Example:</p>
+               
+             </ul>
+              <p>Example:</p>
                 <code>public class MyClass {
                     private static int count; // class variable
                     
@@ -157,10 +159,9 @@
                     }
                 }
                 </code>
-             </ul>
            </article>
         </section>
-        <section class=""main-section id="Global_variables">
+    <section class=""main-section id="Global_variables">
             <header>Global variables</header>
             <article>
             <p>In Java, global variables, also known as class-level variables,
@@ -304,7 +305,7 @@
                     public static void main(String[] args) {
                         int count = 0;
                 
-                        while (count < 5) {
+                        while (count!= 5) {
                             System.out.println("Count: " + count);
                             count++;
                         }
@@ -314,7 +315,7 @@
             </article>
         </section>
             
-            <section class="main-section"id="Function_declarations">
+            <section class="main-section" id="Function_declarations">
         <header>Function declarations</header>
         <article>
         <p>In Java, functions are declared as methods within a class. A method is a block
